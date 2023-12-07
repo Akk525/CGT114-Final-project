@@ -1,0 +1,168 @@
+* {
+    color: white;
+    overflow: hidden;
+}
+
+body {
+    height: 100vh;
+    background-color: black;
+}
+
+section {
+    margin-left: auto;
+    margin-right: auto;
+    height: 94%;
+}
+
+h1 {
+    font-size: 9rem;
+    text-align: center;
+}
+
+img {
+    width: 45%;
+    height:auto;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    margin-top: 6%;
+    font-size: 2rem;
+    align-items: center;
+}
+
+.container h4 {
+    text-align: center;
+}
+
+#facts {
+    width: 70%;
+}
+
+#funfacts {
+    width: 70%;
+}
+
+/* Background star animation */
+@keyframes move-background {
+    from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  @-webkit-keyframes move-background {
+    from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+  @-moz-keyframes move-background {    
+      from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+      @-webkit-keyframes move-background {
+      from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+  .background-container{
+      position: fixed;
+      top: 0;
+      left:0;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+  }
+  
+  .stars {
+   background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+   position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 0;
+  }
+  
+  .twinkling{
+    width:10000px;
+    height: 100%;
+    background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+    background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+      
+    -moz-animation:move-background 70s linear infinite;
+    -ms-animation:move-background 70s linear infinite;
+    -o-animation:move-background 70s linear infinite;
+    -webkit-animation:move-background 70s linear infinite;
+    animation:move-background 70s linear infinite;
+  }
+
+@media only screen and (max-width: 1200px) {
+    img {
+        width: 40%;
+        height: auto;
+        margin: 0 2%;
+    }
+
+    .container {
+        margin-top: 10%;
+        font-size: 1.25rem;
+    }
+
+    .container h6 {
+        font-size: 1rem;
+    }
+  }
+
+@media only screen and (max-width: 500px) {
+    * {
+        overflow: visible;
+    }
+
+    section {
+        margin-top: 3%;
+    }
+
+    h1 {
+        font-size: 3.2rem;
+        margin-bottom: -5%;
+    }
+
+    .container {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    #facts, #funfacts {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    img {
+        width: 55%;
+    }
+  }

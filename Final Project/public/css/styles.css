@@ -1,0 +1,297 @@
+body {
+    color: white;
+    background-color: black;
+    height: 100vh;
+}
+
+.navbar {
+    position: fixed;
+    animation: fadeIn 6s;
+    opacity: 1;
+    bottom: 0;
+}
+
+#sun img {
+    width: 20%;
+    height: 20%;
+    margin-top: -8.5%;
+    animation: fadeIn 6s;
+    opacity: 1;
+}
+
+#mercury img {
+    width: 10%;
+    height: 10%;
+    margin-left: 12%;
+    margin-top: 2%;
+    opacity: 0;
+    animation: fadeIn 6s;
+    opacity: 1;
+}
+
+#venus img {
+    width: 5%;
+    height: 5%;
+    margin-left: 27%;
+    margin-top: -15%;
+    opacity: 0;
+    animation: fadeIn 6s;
+    opacity: 1;
+}
+
+#earth img {
+    width: 10%;
+    height: 10%;
+    margin-left: 22%;
+    margin-top: 2%;
+    opacity: 0;
+    animation: fadeIn 6s;
+    opacity: 1;
+}
+
+#mars img {
+    width: 7%;
+    height: 7%;
+    margin-left: 38%;
+    margin-top: -15%;
+    opacity: 0;
+    animation: fadeIn 6s;
+    opacity: 1;
+}
+
+#jupiter img {
+    width: 10%;
+    height: 10%;
+    margin-left: 48%;
+    margin-top: -4%;
+    opacity: 0;
+    animation: fadeIn 6s;
+    opacity: 1;
+}
+
+#saturn img {
+    width: 15%;
+    height: 15%;
+    margin-left: 62%;
+    margin-top: -23%;
+    opacity: 0;
+    animation: fadeIn 6s;
+    opacity: 1;
+}
+
+#uranus img {
+    width: 8%;
+    height: 8%;
+    margin-left: 70%;
+    margin-top: -8%;
+    opacity: 0;
+    animation: fadeIn 6s;
+    opacity: 1;
+}
+
+#neptune img {
+    width: 7%;
+    margin-left: 90%;
+    margin-top: -6%;
+    opacity: 0;
+    animation: fadeIn 6s;
+    opacity: 1;
+}
+
+div .container {
+    width: 100px;
+}
+
+.title {
+    text-align: center;
+    margin-top: 2%;
+    font-size: 400%;
+    opacity: 0;
+    animation: fadeIn 6s;
+    opacity: 1;
+    z-index: 3;
+}
+
+.greeting{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+form {
+    opacity: 0;
+    animation: fadeIn 6s;
+    opacity: 1;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+}
+
+a:hover {
+    color: #6e6b6b;
+}
+
+/* Background star animation */
+@keyframes move-background {
+    from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  @-webkit-keyframes move-background {
+    from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+  @-moz-keyframes move-background {    
+      from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+      @-webkit-keyframes move-background {
+      from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+      }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+      }
+  }
+  
+  .background-container{
+      position: fixed;
+      top: 0;
+      left:0;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+  }
+  
+  .stars {
+   background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+   position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 0;
+  }
+  
+  .twinkling{
+    width:10000px;
+    height: 100%;
+    background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+    background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+      
+    -moz-animation:move-background 70s linear infinite;
+    -ms-animation:move-background 70s linear infinite;
+    -o-animation:move-background 70s linear infinite;
+    -webkit-animation:move-background 70s linear infinite;
+    animation:move-background 70s linear infinite;
+  }
+
+@keyframes fadeIn {
+from {
+        opacity: 0;
+    }
+    to { 
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #planets {
+        margin-top: 7%;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .title {
+        font-size: 3.2rem;
+    }
+
+    #planets {
+        margin-top: 15%;
+        margin-left: 5%;
+    }
+
+    #sun img {
+        width: 50%;
+        height: 50%;
+        margin-top: -8.5%;
+    }
+    
+    #mercury img {
+        width: 20%;
+        height: 20%;
+        margin-top: 4%;
+        margin-left: 20%;
+    }
+    
+    #venus img {
+        width: 10%;
+        height: 10%;
+        margin-top: 2%;
+        margin-left: 10%;
+    }
+    
+    #earth img {
+        width: 13%;
+        height: 13%;
+        margin-top: -6%;
+        margin-left: 35%;
+    }
+    
+    #mars img {
+        width: 14%;
+        height: 14%;
+        margin-top: 3%;
+        margin-left: 20%;
+    }
+    
+    #jupiter img {
+        width: 20%;
+        height: 20%;
+        margin-top: -1%;
+        margin-left: 42%;
+    }
+    
+    #saturn img {
+        width: 37%;
+        height: 37%;
+        margin-top: 12%;
+        margin-left: 28%;
+    }
+    
+    #uranus img {
+        width: 10%;
+        height: 10%;
+        margin-top: -2%;
+        margin-left: 58%;
+    }
+    
+    #neptune img {
+        width: 15%;
+        margin-top: 5%;
+        margin-left: 77%;
+    }
+  }
